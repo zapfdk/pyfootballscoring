@@ -37,4 +37,4 @@ game_clock.set_clock(minutes=2, seconds=3)
 While creating and running the game, the package will keep track of the current game status and its validity regarding range of the values.
 
 ## Contributing
-Feel free to suggest more tests or features in the Issue Section put it as a pull request.
+Feel free to suggest more tests or features in the Issue Section or put it as a pull request.
