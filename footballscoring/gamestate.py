@@ -1,8 +1,6 @@
 from footballscoring.definitions import Team, Score, Constraints
 from footballscoring.gameconfig import GameConfig
 
-#TODO: Make functions return result, if modification was successful
-
 class GameState:
     """Handles storage of game state and modification of game properties.
 

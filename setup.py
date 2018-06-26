@@ -1,8 +1,8 @@
 import os
 from setuptools import setup
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname).read())
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name="footballscoring",
@@ -15,12 +15,16 @@ setup(
     "or displaying scoreboards."),
     license = "Apache License 2.0",
     keywords = "american football scoring scoreboard liveticker",
-    url = "TODO:",
+    url = "https://github.com/zapfdk/pyfootballscoring",
     packages = ['footballscoring', 'tests'],
-    long_description=read('README.md'),
+    long_description = long_description,
+    long_description_content_type = "text/markdown",
     classifiers=[
         "Development Status :: 2 - Beta",
         "Topic :: Utilities",
         "License :: Apache License 2.0"
+    ],
+    install_requires = [
+        'apscheduler'
     ]
 )
