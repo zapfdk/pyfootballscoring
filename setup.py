@@ -20,9 +20,9 @@ setup(
     long_description = long_description,
     long_description_content_type = "text/markdown",
     classifiers=[
-        "Development Status :: 2 - Beta",
+        "Development Status :: 4 - Beta",
         "Topic :: Utilities",
-        "License :: Apache License 2.0"
+        "License :: OSI Approved :: Apache Software License"
     ],
     install_requires = [
         'apscheduler'
