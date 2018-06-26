@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="footballscoring",
-    version = "0.1",
+    version = "0.2",
     author = "Dominik Zapf",
     author_email = "dominik.zapf@tu-ilmenau.de",
     description = ("A utility package for managing a american football game, "\
