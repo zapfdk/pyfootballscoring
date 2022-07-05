@@ -46,17 +46,18 @@ class GameClock:
         if stop_clock:
             self.running = False
 
-    def set_clock(self, minutes, seconds, stop_clock=True):
+    def set_clock(self, minutes, seconds, microseconds, stop_clock=True):
         """Sets clock to a certain time.
 
         Args: 
             minutes (int): Minutes of the time
             seconds (int): Seconds of the time
+            microseconds (int): Microseconds of the time
             stop_clock (int): Specify whether clock should be stopped after setting the clock, defaults to True.
         Returns:
             None
         """
-        self.remaining_time = timedelta(minutes=minutes, seconds=seconds)
+        self.remaining_time = timedelta(minutes=minutes, seconds=seconds, microseconds=microseconds)
         if stop_clock:
             self.running = False
 
