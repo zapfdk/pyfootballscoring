@@ -21,6 +21,7 @@ class GameClock:
         self.interval_ms = interval_ms
 
         self.scheduler = BackgroundScheduler()
+        self.callback = None
 
     def change_quarter_length(self, quarter_length):
         """Changes the quarter length.
@@ -92,6 +93,9 @@ class GameClock:
         """
         self.running = not self.running
 
+    def set_loop_callback(self, callback):
+        self.callback = callback
+
     def process_clock(self):
         """Callback function for the background scheduler. If clock is set to running, counts down time passed since last iteration.
 
@@ -108,5 +112,7 @@ class GameClock:
             else:
                 self.remaining_time = new_remaining_time
         self.previous_update_time = datetime.now()
+        if self.callback and callable(self.callback):
+            self.callback()
     
     
